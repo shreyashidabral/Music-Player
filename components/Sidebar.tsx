@@ -14,10 +14,9 @@ import { useMemo } from 'react'
 
 interface SidebarProps {
   children: React.ReactNode
-  songs: Song[]
 }
 
-const Sidebar = ({ children, songs }: SidebarProps) => {
+const Sidebar = ({ children }: SidebarProps) => {
   const pathname = usePathname()
 
   const routes = useMemo(
@@ -65,7 +64,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
           </div>
         </Box>
         <Box className="overflow-y-auto h-full">
-          <Library songs={songs} />
+          {/* <Library songs={songs} /> */}
         </Box>
       </div>
       <main className="h-full flex-1 overflow-y-auto py-2">{children}</main>
